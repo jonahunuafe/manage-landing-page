@@ -8,19 +8,48 @@ body {
   margin: 0; 
   padding: 0;
   width: 100%;
-  min-height: 100%;
-  background-color: var(--Vary-Light-Gray);
+  height: 100%; 
+
+
+
+
+
 }
+
+
+
 
 html {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: var(--Font-size);
+  width:100%;
+  height:100%;
 }
+
+
 
 html, body {
-  overflow-x: hidden;
-}
+ /* overflow-x: hidden;*/
 
+ 
+}
+.bg {
+  /* The image used */
+ 
+  /* background-color: yellow;*/
+  height: 100%;
+
+  
+  background-size: cover;
+ 
+
+  /*background-image: url("./images/bg-simplify-section-desktop.svg");*./
+  background-repeat: no-repeat;
+  /* Center and scale the image nicely */
+  /*background-position: center;
+ 
+  background-size: cover;*/
+}
 :root {
   --Bright-Red: hsl(12, 88%, 59%);
   --Dark-Blue: hsl(228, 39%, 23%);
@@ -132,7 +161,13 @@ h2 {
   margin-left: 1.2rem;
   margin-bottom: 4rem;
 }
-
+.nav-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width:100%;
+  color:white;
+  padding:3rem 2rem;
+}
 .label-one {
   margin-top: 3rem;
 }
@@ -158,6 +193,13 @@ h2 {
   width: 20%;
   border-radius: 5vmax;
   text-align: center;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: var(--Very-Dark-Blue);
+  
+
 }
 
 p {
@@ -311,8 +353,11 @@ input[type="email"] {
 
 li {
   list-style: none;
-}
 
+}
+.nav-links li{
+  padding-bottom: 1rem;
+}
 .icons {
   max-width: 100%;
   display: flex;
@@ -323,6 +368,7 @@ li {
 .icon {
   width: 10%;
 }
+
 
 .bottom-logo {
   display: flex;
@@ -336,7 +382,7 @@ li {
 }
 
 .copyright {
-  position: absolute;
+  /*position: absolute;*/
   margin-top: 4.5rem;
   text-align: center;
   width: 100%;
@@ -345,11 +391,11 @@ li {
 }
 
 .attribution {
-  position: absolute;
+
   font-size: 11px; 
   min-height: 40px;
   color: var(--Dark-Grayish-Blue);
-  margin-top: 10rem;
+
   width: 100%;
   text-align: center;
 }  
@@ -359,10 +405,24 @@ li {
   font-style: italic;
 }
 
+.logo-bottom{
+  padding:3rem 2rem 3rem 3rem;
+display: grid;
+  
+}
+.nav_links-info{
+  display: grid;
+  gap:1rem;
+}
+
+.footer_cta{
+  padding: 3rem 2rem;
+  display: grid;
+}
 
 @media (width>= 920px) {
   body {
-    background: none;
+    /*background: none;*/
   }
 
   /* visibility */
@@ -586,16 +646,18 @@ li {
   }
 
   #go-btn {
-    width: 20%;
+   height: 70%;
   }
   
   .icons-img {
     width: 100%;
     display: flex;
-    flex-direction: column-reverse;
-    gap: 5.5rem;
-    position: relative;
+    gap:1rem;
     bottom: 0.8rem;
+  }
+  .icons-img img{
+    height: 20px;
+    width: 20px;
   }
 
   .icons {
@@ -628,12 +690,14 @@ li {
 
   .copyright { 
     font-size: 0.7em;
-    left: 28rem;
-    margin-top: 11rem;
+  }
+
+  .form__container{
+    display: flex;
   }
 
   .attribution {
-    margin-top: 17rem;
     font-size: 0.8em;
   }
+  
 }
